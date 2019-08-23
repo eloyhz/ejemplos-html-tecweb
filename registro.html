@@ -10,11 +10,11 @@
 
     <form method="GET">
 
-        <label for="first-name">First name:</label>
-        <input type="text" name="first-name" id="first-name">
+        <label for="first-name">First name: *</label>
+        <input type="text" name="first-name" id="first-name" required placeholder="your first name">
 
         <label for="last-name">Last name:</label>
-        <input type="text" name="last-name" id="last-name">
+        <input type="text" name="last-name" id="last-name" placeholder="your last name">
         
         <div>
             <input type="radio" name="gender" id="male">
@@ -27,12 +27,56 @@
         
         <div>
             <label for="email">Email:</label>
-            <input type="email" id="email">
+            <input type="email" id="email" placeholder="your email">
             
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password">
+            <label for="password">Password: *</label>
+            <input type="password" name="password" id="password" required placeholder="At least 4 characters" minlength="4">
+        </div>
+
+        <div>
+            <label>Birthday</label>
+            <select name="month">
+                <option>Month</option>
+                <option>----</option>
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option>Apr</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>Jul</option>
+                <option>Aug</option>
+                <option>Sep</option>
+                <option>Oct</option>
+                <option>Nov</option>
+                <option>Dec</option>
+            </select>
+            <select name="day">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>...</option>
+            </select>
+            <select name="year">
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>...</option>
+            </select>
         </div>
         
+        <label for="terms-conditions">
+            I agree to the terms and conditions
+        </label>
+        <input id="terms-conditions" type="checkbox" required>
+
+        <p>
+            * This field is required
+        </p>
         <!-- Botón para enviar la información -->
         <input type="submit" value="Submit" id="send-to-server">
     </form>
